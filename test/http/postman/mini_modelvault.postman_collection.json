@@ -1,0 +1,302 @@
+{
+	"info": {
+		"_postman_id": "f1c1f659-bf8b-4c04-a1cf-cc97586fc8f9",
+		"name": "mini_modelvault",
+		"description": "Run LLMs, vision, and more — all on your own hardware, with full privacy and control\n\n  \nNOTE: FOR VISION MODELS PLEASE SELECT A FILE FROM YOUR LOCAL COMPUTER",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31971639"
+	},
+	"item": [
+		{
+			"name": "Coding Prompt Stream",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "text",
+							"value": "Write a Python script that reads an image file and converts it into a Base64-encoded string. The script should handle common image formats (e.g., PNG, JPEG) and include appropriate error handling. Please include comments explaining each step of the process. Do not use any external libraries beyond the Python Standard Library.",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": {
+					"raw": "{{API_ENDPOINT}}/generate?stream=true",
+					"host": [
+						"{{API_ENDPOINT}}"
+					],
+					"path": [
+						"generate"
+					],
+					"query": [
+						{
+							"key": "stream",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Coding Prompt",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "text",
+							"value": "Write a Python script that reads an image file and converts it into a Base64-encoded string. The script should handle common image formats (e.g., PNG, JPEG) and include appropriate error handling. Please include comments explaining each step of the process. Do not use any external libraries beyond the Python Standard Library.",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{API_ENDPOINT}}/generate",
+					"host": [
+						"{{API_ENDPOINT}}"
+					],
+					"path": [
+						"generate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "General Prompt Stream",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "text",
+							"value": "Tell me a Joke",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{API_ENDPOINT}}/generate?stream=true",
+					"host": [
+						"{{API_ENDPOINT}}"
+					],
+					"path": [
+						"generate"
+					],
+					"query": [
+						{
+							"key": "stream",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "General Prompt",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "text",
+							"value": "Tell me a Joke",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{API_ENDPOINT}}/generate",
+					"host": [
+						"{{API_ENDPOINT}}"
+					],
+					"path": [
+						"generate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API_ENDPOINT}}/health",
+					"host": [
+						"{{API_ENDPOINT}}"
+					],
+					"path": [
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Vision Prompt Stream",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "text",
+							"value": "Extract all clearly readable and meaningful text from this image. Ignore any watermarks, logos, or repetitive background text. Focus only on the main content, such as headings, body text, or labels that are meant to be read.",
+							"type": "text"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": {
+					"raw": "{{API_ENDPOINT}}/generate?stream=true",
+					"host": [
+						"{{API_ENDPOINT}}"
+					],
+					"path": [
+						"generate"
+					],
+					"query": [
+						{
+							"key": "stream",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Vision Prompt",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "text",
+							"value": "Extract all clearly readable and meaningful text from this image. Ignore any watermarks, logos, or repetitive background text. Focus only on the main content, such as headings, body text, or labels that are meant to be read.",
+							"type": "text"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": {
+					"raw": "{{API_ENDPOINT}}/generate",
+					"host": [
+						"{{API_ENDPOINT}}"
+					],
+					"path": [
+						"generate"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "API_ENDPOINT",
+			"value": "http://localhost:8000",
+			"type": "string"
+		},
+		{
+			"key": "SIDECAR_ENDPOINT",
+			"value": "http://localhost:8000",
+			"type": "string"
+		}
+	]
+}

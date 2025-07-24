@@ -1,0 +1,24 @@
+General Prompt:
+    - What are the key advantages of running a local large language model (LLM) compared to using a cloud-based or API-hosted LLM? Please explain in terms of privacy, performance, cost, and customization.
+    - Suggest a study plan for learning LLMs
+
+Coding Prompt:
+    - How do I implement Basic Authentication in a Python web application?
+    - Here's a Python code snippet that's supposed to implement basic authentication in Flask, but it's not working correctly. Can you help me identify and fix the issue?
+      from flask import Flask, request
+
+      app = Flask(__name__)
+
+      @app.route('/secure')
+      def secure():
+          auth = request.authorization
+          if auth.username == 'admin' and auth.password == 'secret':
+              return "Welcome!"
+          else:
+              return "Unauthorized", 401
+
+      if __name__ == '__main__':
+          app.run()
+
+Vision Prompt:
+    - Explain the given image in one concise sentence <image>assets/test_image_1.png<image>

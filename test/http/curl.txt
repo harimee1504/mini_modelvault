@@ -1,0 +1,11 @@
+General Prompt:
+curl --location -N 'http://localhost:8000/generate?stream=true' --form 'text="Tell me a joke ?"'
+
+Coding Prompt:
+curl --location -N 'http://localhost:8000/generate?stream=true' --form 'text="Write a Python script that reads an image file and converts it into a Base64-encoded string. Do not use any external libraries beyond the Python Standard Library."'
+
+Vision Prompt:
+curl --location -N 'http://localhost:8000/generate?stream=true' --form 'text="Extract text in the image"' --form 'file=@"assets/test_image_1.png"'
+
+Vision Prompt: (Provide filepath in file key)
+curl --location -N 'http://localhost:8000/generate?stream=true' --form 'text="what is the background color of the image?"' --form 'file=@"/C:/Users/<username>/Downloads/<image_name>.<image_extension>"'
