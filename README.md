@@ -175,7 +175,7 @@ curl --location -N 'http://localhost:8000/generate?stream=true' --form 'text="Ex
 
 Here are some ways to further enhance mini-modelvault:
 
-1. **Sidebar Design Pattern for Health & Status Checks with Snapshots**
+1. **Sidecar Design Pattern for Health & Status Checks with Snapshots**
    - Implement a sidebar UI (web or TUI) that continuously displays live health and status information, including RAM, CPU, GPU, and model status. Add the ability to view historical resource usage snapshots for better observability and troubleshooting. This would provide users with real-time and historical insights at a glance, improving monitoring and debugging.
 2. **User Authentication & API Key Management**
    - Add user accounts and API key support for secure, multi-user access to the HTTP API.
