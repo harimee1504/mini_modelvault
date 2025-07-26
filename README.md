@@ -51,6 +51,7 @@ mini_modelvault/
 
 ### 1. Prerequisites
 - Python **3.13+**
+- Git
 - [uv](https://github.com/astral-sh/uv) (fast Python package manager; [installation guide](https://github.com/astral-sh/uv#installation))
 - (Optional) NVIDIA GPU for vision model acceleration
 - [Ollama](https://ollama.com/) running locally for model backend (see below)
