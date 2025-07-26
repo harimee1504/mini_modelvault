@@ -59,7 +59,7 @@ class ModelRouter:
             self.logger.error(f"Failed to load models: {e}")
             raise
         self.output_parser = StrOutputParser()
-        self.router_model = ChatOllama(model=cfg["MODEL_GENERAL"])
+        self.router_model = ChatOllama(model=general_model)
         self.router_chain = (
             self.router_model
             | self.output_parser
