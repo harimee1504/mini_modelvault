@@ -18,6 +18,12 @@
 
 *Example: CLI output for a general LLM prompt (left) and a vision model prompt (right).*
 
+**New Installation**
+
+![New Installation](screenshots/new_installation.JPG)
+
+*Note: The new installation will automatically check for any required models and download them if they’re not already installed.*
+
 ---
 
 ## 📁 Folder Structure
@@ -78,7 +84,7 @@ $ uv pip install -r requirements.txt
 $ uv pip install -r <(uv pip compile pyproject.toml)
 ```
 
-### 3. Model Setup (Ollama)
+### 3. Model Setup (Ollama)(Automatically check and download)
 - Download and run [Ollama](https://ollama.com/) locally
 - Pull required models (e.g., `llama3.2:3b`, `qwen2.5-coder:3b`, `llava-phi3:latest`) using:
   ```bash
@@ -176,13 +182,15 @@ curl --location -N 'http://localhost:8000/generate?stream=true' --form 'text="Ex
 
 Here are some ways to further enhance mini-modelvault:
 
-1. **Sidecar Design Pattern for Health & Status Checks with Snapshots**
-   - Implement a sidebar UI (web or TUI) that continuously displays live health and status information, including RAM, CPU, GPU, and model status. Add the ability to view historical resource usage snapshots for better observability and troubleshooting. This would provide users with real-time and historical insights at a glance, improving monitoring and debugging.
-2. **User Authentication & API Key Management**
+1. **Session Context Management**
+   - Implement context retention between subsequent queries until the session is closed, allowing for continuous conversations and multi-turn interactions.
+2. **Sidecar Design Pattern for Health & Status Checks with Snapshots**
+   - Implement a sidebar UI that continuously displays live health and status information, including RAM, CPU, GPU, and model status. Add the ability to view historical resource usage snapshots for better observability and troubleshooting. This would provide users with real-time and historical insights at a glance, improving monitoring and debugging.
+3. **User Authentication & API Key Management**
    - Add user accounts and API key support for secure, multi-user access to the HTTP API.
-3. **Web-based Model Management Dashboard**
+4. **Web-based Model Management Dashboard**
    - Build a simple web UI to monitor running models, manage settings, and view logs/usage in real time.
-4. **Advanced Analytics & Usage Reporting**
+5. **Advanced Analytics & Usage Reporting**
    - Integrate analytics to track usage, performance, and errors, with exportable reports for admins.
 
 Feel free to open an issue or pull request if you want to work on any of these features or suggest your own!
